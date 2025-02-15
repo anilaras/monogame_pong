@@ -1,0 +1,4 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"/media/aras/DEPO/WORK/Projeler/Personal/dotnet/monogame/Content/ball.png","/media/aras/DEPO/WORK/Projeler/Personal/dotnet/monogame/Content/bin/DesktopGL/Content/ball.xnb","TextureProcessor","Texture2DContent",8368,16469,0.0761877
+"/media/aras/DEPO/WORK/Projeler/Personal/dotnet/monogame/Content/font.spritefont","/media/aras/DEPO/WORK/Projeler/Personal/dotnet/monogame/Content/bin/DesktopGL/Content/font.xnb","FontDescriptionProcessor","SpriteFontContent",2008,21538,0.1384254
+"/media/aras/DEPO/WORK/Projeler/Personal/dotnet/monogame/Content/Sprites/player.jpg","/media/aras/DEPO/WORK/Projeler/Personal/dotnet/monogame/Content/bin/DesktopGL/Content/Sprites/player.xnb","TextureProcessor","Texture2DContent",655,4085,0.080993

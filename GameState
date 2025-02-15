@@ -1,0 +1,75 @@
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+
+namespace GameStateExample
+{
+    public abstract class GameState
+    {
+        protected Game1 game;
+
+        public GameState(Game1 game)
+        {
+            this.game = game;
+        }
+
+        public abstract void LoadContent();
+        public abstract void UnloadContent();
+        public abstract void Update(GameTime gameTime);
+        public abstract void Draw(GameTime gameTime, SpriteBatch spriteBatch);
+    }
+
+    public class Game1 : Game
+    {
+        private GraphicsDeviceManager _graphics;
+        private SpriteBatch _spriteBatch;
+        private GameState _currentState;
+
+        public Game1()
+        {
+            _graphics = new GraphicsDeviceManager(this);
+            Content.RootDirectory = "Content";
+            IsMouseVisible = true;
+        }
+
+        protected override void Initialize()
+        {
+            // TODO: Add your initialization logic here
+
+            base.Initialize();
+        }
+
+        protected override void LoadContent()
+        {
+            _spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            // TODO: use this.Content to load your game content here
+        }
+
+        protected override void Update(GameTime gameTime)
+        {
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+                Exit();
+
+            _currentState?.Update(gameTime);
+
+            base.Update(gameTime);
+        }
+
+        protected override void Draw(GameTime gameTime)
+        {
+            GraphicsDevice.Clear(Color.CornflowerBlue);
+
+            _currentState?.Draw(gameTime, _spriteBatch);
+
+            base.Draw(gameTime);
+        }
+
+        public void ChangeState(GameState newState)
+        {
+            _currentState?.UnloadContent();
+            _currentState = newState;
+            _currentState.LoadContent();
+        }
+    }
+}
