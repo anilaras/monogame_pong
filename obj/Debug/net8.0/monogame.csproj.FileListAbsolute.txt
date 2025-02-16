@@ -28,3 +28,5 @@
 /media/aras/DEPO/WORK/Projeler/Personal/dotnet/monogame/obj/Debug/net8.0/monogame.resource.resources
 /media/aras/DEPO/WORK/Projeler/Personal/dotnet/monogame/obj/Debug/net8.0/monogame.csproj.GenerateResource.cache
 /media/aras/DEPO/WORK/Projeler/Personal/dotnet/monogame/bin/Debug/net8.0/Content/Sprites/player.xnb
+/media/aras/DEPO/WORK/Projeler/Personal/dotnet/monogame/obj/Debug/net8.0/monogame.sourcelink.json
+/media/aras/DEPO/WORK/Projeler/Personal/dotnet/monogame/bin/Debug/net8.0/MonoGame.Extended.dll

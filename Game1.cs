@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using MonoGame.Extended;
 using PongGame;
 using YourNamespace;
 using static Helper;
@@ -74,7 +75,7 @@ public class Game1 : Game
         GraphicsDevice.Clear(Color.Black);
         _spriteBatch.Begin();
         player.Draw(_spriteBatch);
-        ball.Draw(_spriteBatch);
+        _spriteBatch.DrawCircle(ball.getBallPosition(), 10, 100, Color.Red);
         enemy.Draw(_spriteBatch);
         Score.Draw( _graphics ,_spriteBatch);
         _spriteBatch.End();
